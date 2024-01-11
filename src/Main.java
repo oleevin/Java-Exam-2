@@ -1,3 +1,13 @@
+public class Main {
+    public static void main(String[] args) {
+        Rectangle rectangle = new Rectangle(10, 50);
+        System.out.println("Area of rectangle: " + rectangle.getArea());
+        System.out.println("Perimeter of rectangle: " + rectangle.getPerimeter());
+        Square square = new Square(10);
+        System.out.println("Area of square: " + square.getArea());
+        System.out.println("Perimeter of square: " + square.getPerimeter());
+    }
+}
 class Rectangle {
     protected double length;
     protected double width;
@@ -15,15 +25,5 @@ class Rectangle {
 class Square extends Rectangle {
     public Square(double side) {
         super(side, side);
-    }
-}
-public class Main {
-    public static void main(String[] args) {
-        Rectangle rectangle = new Rectangle(10, 50);
-        System.out.println("Area of rectangle: " + rectangle.getArea());
-        System.out.println("Perimeter of rectangle: " + rectangle.getPerimeter());
-        Square square = new Square(10);
-        System.out.println("Area of square: " + square.getArea());
-        System.out.println("Perimeter of square: " + square.getPerimeter());
     }
 }
