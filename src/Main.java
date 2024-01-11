@@ -1,14 +1,4 @@
-public class Main {
-    public static void main(String[] args) {
-        Rectangle rectangle = new Rectangle(10, 50);
-        System.out.println("Area of rectangle: " + rectangle.getArea());
-        System.out.println("Perimeter of rectangle: " + rectangle.getPerimeter());
-        Square square = new Square(10);
-        System.out.println("Area of square: " + square.getArea());
-        System.out.println("Perimeter of square: " + square.getPerimeter());
-    }
-}
-class Rectangle {
+public class Rectangle {
     protected double length;
     protected double width;
     public Rectangle(double length, double width) {
@@ -22,8 +12,19 @@ class Rectangle {
         return 2 * (length + width);
     }
 }
-class Square extends Rectangle {
+
+public class Square extends Rectangle {
     public Square(double side) {
         super(side, side);
     }
+
+        public static void main(String[] args) {
+            Rectangle rec = new Rectangle(10, 50);
+            System.out.println("Area rec : " + rec.getArea());
+            System.out.println("Peri rec: " + rec.getPerimeter());
+            Square squ = new Square(10);
+            System.out.println("Area squ: " + squ.getArea());
+            System.out.println("Peri squ: " + squ.getPerimeter());
+        }
 }
+
